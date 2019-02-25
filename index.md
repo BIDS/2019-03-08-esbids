@@ -11,7 +11,7 @@ humantime: "9:00 am - 1:00 pm PST"   # hora del taller en formato legible (por e
 startdate: COMPLETAR      # fecha de inicio del taller en formato YYYY-MM-DD (por ejemplo, 2015-01-01)
 enddate: COMPLETAR        # fecha de finalización del taller en formato YYYY-MM-DD, por ejemplo 2015-01-02
 instructor: ["Juan Pablo Carvallo", "Hector Miguel Sanchez Castellanos"] # lista de nombres de las instructoras separados por comas y entre corchetes, como ["Hedy Lamarr", "Ada Lovelace", "Madame Curie"]
-helper: ["COMPLETAR"]     # lista de nombres de las **helpers** separados por comas y entre corchetes, como ["Carrie Fisher", "Frances Allen", "Margaret Hamilton"]
+#helper: ["COMPLETAR"]     # lista de nombres de las **helpers** separados por comas y entre corchetes, como ["Carrie Fisher", "Frances Allen", "Margaret Hamilton"]
 email: ["vnvasquez@berkeley.edu"]    # lista de direcciones de correo electrónico de contacto con la **host** ó **lead instructor**, separadas por comas y entre corchetes, como ["ada.lovelace@ejemplo.org", "carrie.fisher@ejemplo.org", "hedy.lamarr@example.org"]
 collaborative_notes:             # optional: URL de las notas colaborativas del taller, por ejemplo un Etherpad o documento de Google Docs 
 eventbrite: "https://bids.berkeley.edu/events/introducción-r-y-git-introduction-r-and-git"    # optional: clave alfanumérica de registro en Eventbrite, por ejemplo "1234567890AB" (si se está utilizando Eventbrite)
@@ -30,7 +30,7 @@ eventbrite: "https://bids.berkeley.edu/events/introducción-r-y-git-introduction
 
 {% comment %}
   EVENTBRITE
-  Es requisito registrarse para participar en este workshop. Por favor reserva su puesto en Eventbrite. 
+ Es requisito registrarse para participar en este workshop. Por favor reserva su puesto aquí:   
   
 {% endcomment %}
 {% if page.eventbrite %}
