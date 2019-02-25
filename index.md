@@ -180,7 +180,6 @@ También es requerido que respeten el
 <h2 id="schedule">Cronograma</h2>
 
 {% comment %} NO EDITAR LOS ENLACES A LAS ENCUESTAS {% endcomment %}
-<p><em>Encuestas</em></p>
 {% if page.carpentry == "swc" %}
 <p>Por favor, asegúrese de completar estas encuestas después del taller:<a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
 
