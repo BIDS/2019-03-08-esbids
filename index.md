@@ -1,17 +1,17 @@
 ---
 layout: workshop      # NO CAMBIAR ESTO 
-carpentry: "Introducción a R y Git"    # qué tipo de Carpentry (ya sea "lc", "dc" o "swc")
+carpentry: "swc"    # qué tipo de Carpentry (ya sea "lc", "dc" o "swc")
 venue: "Berkeley Institute for Data Science"        # nombre breve del espacio donde se lleva adelante el taller, sin dirección (por ejemplo, "Universidad de Buenos Aires")
 address: 190 Doe Library, Berkeley, California 94720      # dirección completa del espacio donde se realizará el taller (por ejemplo, "Aula 3, Av. Córdoba 1234, Buenos Aires, Argentina")
 country: "USA"      # código ISO del país, dos letras en minúscula como por ejemplo "fr" (ver https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "es"     # código ISO del idioma, dos letras en minúscula como por ejemplo "fr" (ver https://en.wikipedia.org/wiki/ISO_639-1)
-#latlng: "COMPLETAR"       # latitud y longitud del espacio en formato decimal (por ejemplo, "41.7901128,-87.6007318" - usar http://www.latlong.net/)
+latlng: "COMPLETAR"       # latitud y longitud del espacio en formato decimal (por ejemplo, "41.7901128,-87.6007318" - usar http://www.latlong.net/)
 humandate: "8 marzo, 2019"   # fechas del taller en formato legible (por ejemplo, "Feb 17-18, 2020")
 humantime: "9:00 am - 1:00 pm PST"   # hora del taller en formato legible (por ejemplo, "9:00 am - 4:30 pm")
-#startdate: COMPLETAR      # fecha de inicio del taller en formato YYYY-MM-DD (por ejemplo, 2015-01-01)
-#enddate: COMPLETAR        # fecha de finalización del taller en formato YYYY-MM-DD, por ejemplo 2015-01-02
+startdate: COMPLETAR      # fecha de inicio del taller en formato YYYY-MM-DD (por ejemplo, 2015-01-01)
+enddate: COMPLETAR        # fecha de finalización del taller en formato YYYY-MM-DD, por ejemplo 2015-01-02
 instructor: ["Juan Pablo Carvallo", "Hector Miguel Sanchez Castellanos"] # lista de nombres de las instructoras separados por comas y entre corchetes, como ["Hedy Lamarr", "Ada Lovelace", "Madame Curie"]
-#helper: ["COMPLETAR"]     # lista de nombres de las **helpers** separados por comas y entre corchetes, como ["Carrie Fisher", "Frances Allen", "Margaret Hamilton"]
+helper: ["COMPLETAR"]     # lista de nombres de las **helpers** separados por comas y entre corchetes, como ["Carrie Fisher", "Frances Allen", "Margaret Hamilton"]
 email: ["vnvasquez@berkeley.edu"]    # lista de direcciones de correo electrónico de contacto con la **host** ó **lead instructor**, separadas por comas y entre corchetes, como ["ada.lovelace@ejemplo.org", "carrie.fisher@ejemplo.org", "hedy.lamarr@example.org"]
 collaborative_notes:             # optional: URL de las notas colaborativas del taller, por ejemplo un Etherpad o documento de Google Docs 
 eventbrite: Es requisito registrarse para participar en este workshop. Por favor reserva su puesto aquí: https://bids.berkeley.edu/events/introducci%C3%B3n-r-y-git-introduction-r-and-git    # optional: clave alfanumérica de registro en Eventbrite, por ejemplo "1234567890AB" (si se está utilizando Eventbrite)
@@ -493,95 +493,6 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
   </div>
 </div> {% comment %} End of 'editor' section. {% endcomment %}
 
-<div id="python"> {% comment %} Comienzo de la sección de 'Python'. Eliminar el tercer párrafo si el taller enseñará Python usando algo diferente a **Jupyter notebook**.
-           Detalles en https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility (en inglés){% endcomment %}
-  <h3>Python</h3>
-
-  <p>
-    <a href="http://python.org">Python</a> es un lenguaje popular para
-    investigación, y excelente para programación de propósito general.
-    Instalar todos sus paquetes de investigación individualmente puede ser
-    un poco difícil, así que recomendamos
-    <a href="https://www.anaconda.com/distribution/">Anaconda</a>,
-    un instalador "todo en uno".
-  </p>
-
-    <p>
-      Independientemente de cómo elijas instalarlo,
-      <strong>por favor asegúrate de instalar alguna de las versiones de Python 3</strong>
-      (por ejemplo, 3.6).
-    </p>
-
-    <p>
-      Enseñaremos Python usando <a href="https://jupyter.org/">Jupyter notebook</a>,
-      un ambiente de programación que se ejecuta en un navegador web. Para que funcione necesitarás un
-      navegador razonablemente actualizado.
-      Las versiones actuales de los navegadores Chrome, Safari y Firefox están todas
-      <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility">soportadas</a>
-      (no están soportados algunos navegadores antiguos, incluyendo Internet Explorer versión 9 y
-      anteriores).
-    </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="python-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=xxQ0mzZ8UvA">Video Tutorial</a>
-      <ol>
-        <li>Ingresa a <a href="https://www.anaconda.com/download/#windows">https://www.anaconda.com/download/#windows</a> con tu navegador web.</li>
-        <li>Descarga el instalador de Python 3 para Windows</li>
-        <li>Instala Python 3 usando todas las opciones por defecto, salvo la que dice <strong>Hacer Anaconda la instalación por defecto de Python</strong>, <em>asegúrate de tildarla</em></li>
-      </ol>
-    </div>
-    <div class="col-md-4">
-      <h4 id="python-macosx">macOS</h4>
-      <a href="https://www.youtube.com/watch?v=TcSAln46u9U">Video Tutorial</a>
-      <ol>
-        <li>Ingresa a <a href="https://www.anaconda.com/download/#macos">https://www.anaconda.com/download/#macos</a> con tu navegador web.</li>
-        <li>Descarga el instalador de Python 3 para OS X.</li>
-        <li>Instala Python 3 usando todas las opciones por defecto.</li>
-      </ol>
-    </div>
-    <div class="col-md-4">
-      <h4 id="python-linux">Linux</h4>
-      <ol>
-        <li>Ingresa a <a href="https://www.anaconda.com/download/#linux">https://www.anaconda.com/download/#linux</a> con tu navegador web.</li>
-        <li>Descarga el instalador de Python 3 para Linux.<br>
-          (La instalación requiere el uso de la terminal. Si no te sientes cómoda
-          haciendo la  instalación por tu cuenta, detente aquí y pide ayuda en el taller)
-        </li>
-        <li>
-          Abre una terminal.
-        </li>
-        <li>
-          Escribe <pre>bash Anaconda3-</pre> presiona tab.
-          El nombre del archivo que acabas de descargar debería aparecer
-          Si no lo hace, muévete a la carpeta donde descargaste el archivo,
-          por ejemplo:
-          <pre>cd Downloads</pre>
-          Luego, intenta nuevamente.
-        </li>
-        <li>
-          Presiona Enter. Deberás seguir las instrucciones en la línea de comandos.
-          Para moverte por el texto, presiona la tecla de espacio. Escribe <code>yes</code> y
-          presiona enter para aceptar la licencia. Presiona enter para aceptar la
-          ruta por defecto de los archivos. Escribe <code>yes</code> y
-          presiona enter para agregar Anaconda detrás de tu <code>PATH</code>
-          (esto hace a la distribución de Anaconda el Python por defecto en nuestro sistema).
-        </li>
-        <li>
-          Cierra la terminal.
-        </li>
-      </ol>
-    </div>
-  </div>
-{% comment %}
-  <p>
-  Una vez que terminas de instalar los programas listados arriba,
-  por favor ve a <a href="setup/index.html">esta página</a>,
-  que tiene instrucciones sobre cómo testear que todo ha sido instalado correctamente.
-  </p>
-{% endcomment %}
-</div> {% comment %} Fin de la sección 'Python'. {% endcomment %}
 
 <div id="r"> {% comment %} Start of 'R' section. {% endcomment %}
   <h3>R</h3>
