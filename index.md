@@ -179,6 +179,25 @@ También es requerido que respeten el
 {% endcomment %}
 <h2 id="schedule">Cronograma</h2>
 
+
+{% comment %}
+  Notas de colaboración
+
+  Si quieres usar un Etherpad, ve a
+
+      http://pad.software-carpentry.org/YYYY-MM-DD-site
+
+  donde 'YYYY-MM-DD-site' es el identificador de su taller,
+  e.g., '2015-06-10-esu'.
+{% endcomment %}
+{% if page.collaborative_notes %}
+<p id="collaborative_notes">
+ Utilizaremos este <a href="{{page.collaborative_notes}}"> documento colaborativo </a> para chatear, tomar notas y compartir URL y fragmentos de código.
+</p>
+{% endif %}
+
+
+
 {% comment %} NO EDITAR LOS ENLACES A LAS ENCUESTAS {% endcomment %}
 {% if page.carpentry == "swc" %}
 <p>Por favor, asegúrese de completar estas encuestas después del taller:<a href="{{ site.swc_post_survey }}{{ site.github.project_title }}"> encuesta post-taller </a></p>
@@ -200,21 +219,13 @@ También es requerido que respeten el
   {% include lc/schedule.html %}
 {% endif %}
 
-{% comment %}
-  Notas de colaboración
 
-  Si quieres usar un Etherpad, ve a
 
-      http://pad.software-carpentry.org/YYYY-MM-DD-site
 
-  donde 'YYYY-MM-DD-site' es el identificador de su taller,
-  e.g., '2015-06-10-esu'.
-{% endcomment %}
-{% if page.collaborative_notes %}
-<p id="collaborative_notes">
- Utilizaremos este <a href="{{page.collaborative_notes}}"> documento colaborativo </a> para chatear, tomar notas y compartir URL y fragmentos de código.
-</p>
-{% endif %}
+
+
+
+
 
 <hr/>
 
