@@ -1,7 +1,7 @@
 ---
 layout: workshop      # NO CAMBIAR ESTO 
 carpentry: "swc"    # qué tipo de Carpentry (ya sea "lc", "dc" o "swc")
-workshoptitle: "Introducción a R y Git"
+workshop_title: "Introducción a R y Git"
 venue: "Berkeley Institute for Data Science"        # nombre breve del espacio donde se lleva adelante el taller, sin dirección (por ejemplo, "Universidad de Buenos Aires")
 address: 190 Doe Library, Berkeley, California 94720      # dirección completa del espacio donde se realizará el taller (por ejemplo, "Aula 3, Av. Córdoba 1234, Buenos Aires, Argentina")
 country: "USA"      # código ISO del país, dos letras en minúscula como por ejemplo "fr" (ver https://en.wikipedia.org/wiki/ISO_3166-1)
@@ -9,12 +9,12 @@ language: "es"     # código ISO del idioma, dos letras en minúscula como por e
 latlng: "37.872495, -122.259556"       # latitud y longitud del espacio en formato decimal (por ejemplo, "41.7901128,-87.6007318" - usar http://www.latlong.net/)
 humandate: "8 marzo, 2019"   # fechas del taller en formato legible (por ejemplo, "Feb 17-18, 2020")
 humantime: "9:00am - 1:00pm PST"   # hora del taller en formato legible (por ejemplo, "9:00 am - 4:30 pm")
-startdate: 2019-03-08      # fecha de inicio del taller en formato YYYY-MM-DD (por ejemplo, 2015-01-01)
-enddate: 2019-03-08         # fecha de finalización del taller en formato YYYY-MM-DD, por ejemplo 2015-01-02
+startdate: 2019-03-08  # fecha de inicio del taller en formato YYYY-MM-DD (por ejemplo, 2015-01-01)
+enddate: 2019-03-08   # fecha de finalización del taller en formato YYYY-MM-DD, por ejemplo 2015-01-02
 instructor: ["Juan Pablo Carvallo", "Hector Miguel Sanchez Castellanos"] # lista de nombres de las instructoras separados por comas y entre corchetes, como ["Hedy Lamarr", "Ada Lovelace", "Madame Curie"]
 #helper: ["COMPLETAR"]     # lista de nombres de las **helpers** separados por comas y entre corchetes, como ["Carrie Fisher", "Frances Allen", "Margaret Hamilton"]
 email: ["vnvasquez@berkeley.edu"]    # lista de direcciones de correo electrónico de contacto con la **host** ó **lead instructor**, separadas por comas y entre corchetes, como ["ada.lovelace@ejemplo.org", "carrie.fisher@ejemplo.org", "hedy.lamarr@example.org"]
-collaborative_notes:             # optional: URL de las notas colaborativas del taller, por ejemplo un Etherpad o documento de Google Docs 
+collaborative_notes: http://pad.software-carpentry.org/2019-03-08-esbids   # optional: URL de las notas colaborativas del taller, por ejemplo un Etherpad o documento de Google Docs 
 eventbrite: 57139564977    # optional: clave alfanumérica de registro en Eventbrite, por ejemplo "1234567890AB" (si se está utilizando Eventbrite)
 ---
 
@@ -181,7 +181,7 @@ También es requerido que respeten el
 
 {% comment %} NO EDITAR LOS ENLACES A LAS ENCUESTAS {% endcomment %}
 {% if page.carpentry == "swc" %}
-<p>Por favor, asegúrese de completar estas encuestas después del taller:<a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
+<p>Por favor, asegúrese de completar estas encuestas después del taller:<a href="{{ site.swc_post_survey }}{{ site.github.project_title }}"> encuesta post-taller </a></p>
 
 {% elsif page.carpentry == "dc" %}
   <p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
