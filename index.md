@@ -279,87 +279,65 @@ También es requerido que respeten el
   <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
 
-<div id="shell"> {% comment %} Start of 'shell' section. {% endcomment %}
-  <h3>La terminal Bash</h3>
+
+<div id="r"> {% comment %} Start of 'R' section. {% endcomment %}
+  <h3>R</h3>
 
   <p>
-    Bash es una de las terminales más frecuentemente utilizadas, que te permite realizar tareas simples de forma rápida.
+    <a href="http://www.r-project.org">R</a> es un lenguaje de programación 
+    especialmente poderoso para exploración de datos, visualización y  
+    análisis estadístico. Para trabajar con R, usamos
+    <a href="http://www.rstudio.com/">RStudio</a>.
   </p>
 
   <div class="row">
     <div class="col-md-4">
-      <h4 id="shell-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
-      <ol>
-        <li>Descarga el <a href="https://git-for-windows.github.io/">instalador</a> de Git para Windows.</li> 
-        <li>Ejecuta el instalador y sigue los siguientes pasos:
-          <ol>
-            {% comment %} Instalación de Git 2.8.2 {% endcomment %}
-            {% comment %} Información {% endcomment %}
-            <li>Click en "Siguiente".</li>
-            {% comment %} Seleccionar Componentes{% endcomment %}
-            <li>Click en "Siguiente".</li>
-            {% comment %} Ajustar tu variable de entorno PATH {% endcomment %}
-            <li>
-              <strong>
-                Dejar seleccionado "Utilizar Git desde la Línea de Comando de Windows" y click en "Siguiente".
-              </strong>
-                Si olvidaste hacer esto, los programas que necesitas para el taller no funcionarán correctamente. 
-		Si esto sucede vuelve a ejecutar el instalador y selecciona la opción adecuada.
-            </li>
-            {% comment %} Eligiendo el ejecutable SSH {% endcomment %}
-            <li>Click en "Siguiente".</li>
-            {% comment %} Configurando los finales de línea {% endcomment %}
-            <li>
-              <strong>
-                Deja seleccionado "Deshabilitar estilo Windows, confirmar estilo Unix para los finales de líneas" y click en "Siguiente".
-              </strong>
-            </li>
-            {% comment %} Configurando el emulador de la terminal para ser utilizado con Git Bash {% endcomment %}
-            <li>
-              <strong>
-                Dejar seleccionado "Utilizar ventana de consola de Windows por defecto" y click en "Next".
-              </strong>
-            </li>
-            {% comment %} Configurando ajustes de rendimiento experimental {% endcomment %}
-            <li>Click en "Instalar".</li>
-            {% comment %} Instalando {% endcomment %}
-            {% comment %} Completando el Asistente de Instalación de Git{% endcomment %}
-            <li>Click en "Finalizar".</li>
-          </ol>
-        </li>
-        <li>
-          Si tu variable de entorno "HOME" no está configurada (o si no sabes qué es esto):
-          <ol>
-            <li>Abre una terminal (Abrir Menú Inicio y escribir <code>cmd</code> y presionar [Enter])</li>
-            <li>
-              Estcribe la siguiente línea en la ventana de la terminal exactamente como sigue:
-              <p><code>setx HOME "%USERPROFILE%"</code></p>
-            </li>
-            <li>Presiona [Enter], deberías ver <code>SUCCESS: Specified value was saved.</code></li>
-            <li>Sal de la terminal escribiendo <code>exit</code> y presionando [Enter]</li>
-          </ol>
-        </li>
-      </ol>
-      <p>Esto instalará tanto Git y Bash en el programa Git Bash.</p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="shell-macosx">macOS</h4>
+      <h4 id="r-windows">Windows</h4>
+      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial en inglés </a>
       <p>
-        La terminal por defecto en todas las versiones de macOS es Bash, así que no es necesario instalar nada. Puedes acceder a Bash desde la Terminal (se encuentra en
-        <code>/Applications/Utilities</code>).
-        Puedes ver el <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a> de instalación de Git a modo de ejemplo de cómo abrir la Terminal. 
-	Puede que quieras mantener la Terminal en tu dock para este taller. 
+
+
+
+        Instala R descargando e instalando
+        <a href="http://cran.r-project.org/bin/windows/base/release.htm">este archivo .exe </a>
+        desde <a href="http://cran.r-project.org/index.html">CRAN</a>.
+        Además, instala el entorno de desarrollo integrado, en inglés Integrated Development Environment (IDE) 
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
+        Ten en cuenta que si tienes cuentas separadas de usuario y administrador,
+	debes correr los instaladores como administrador (haz click derecho en el 
+        archivo .exe y selecciona "Ejecutar como administrador" en lugar de hacer doble click)  
+        De lo contrario pueden ocurrir problemas, por ejemplo, cuando instales paquetes de R.
+
+
       </p>
     </div>
     <div class="col-md-4">
-      <h4 id="shell-linux">Linux</h4>
+      <h4 id="r-macosx">macOS</h4>
+      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial en inglés</a>
       <p>
-        La consola por defecto es generalmente Bash, pero si tu máquina está configurada de forma distinta puedes ejecutarla abriendo una terminal y escribiendo <code>bash</code>. No hay necesidad de instalar nada.
+        Instala R descargando e instalando
+        <a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">este archivo .pkg </a>
+        desde <a href="http://cran.r-project.org/index.html">CRAN</a>.
+        Además, instala el entorno de desarrollo integrado, en inglés Integrated Development Environment (IDE) 
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="r-linux">Linux</h4>
+      <p>
+        Puedes descargar los archivos binarios para tu distribución
+        desde <a href="http://cran.r-project.org/index.html">CRAN</a>. O
+        puedes usar tu administrador de paquetes (por ejemplo: para Debian/Ubuntu
+        corre <code>sudo apt-get install r-base</code> y para Fedora corre
+        <code>sudo dnf install R</code>).  Además, por favor instala el entorno de desarrollo integrado, 
+	en inglés Integrated Development Environment (IDE) 
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
       </p>
     </div>
   </div>
-</div> {% comment %} End of 'shell' section. {% endcomment %}
+</div> {% comment %} End of 'R' section. {% endcomment %}
+
+
 <div id="git"> {% comment %} Start of 'Git' section. La compatibilidad de GitHub  
            esta en https://help.github.com/articles/supported-browsers/{% endcomment %}
   <h3>Git</h3>
@@ -415,6 +393,8 @@ También es requerido que respeten el
     </div>
   </div>
 </div> {% comment %} End of 'Git' section. {% endcomment %}
+
+
 
 <div id="editor"> {% comment %} Start of 'editor' section. {% endcomment %}
   <h3>Text Editor</h3>
@@ -494,168 +474,7 @@ escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
 </div> {% comment %} End of 'editor' section. {% endcomment %}
 
 
-<div id="r"> {% comment %} Start of 'R' section. {% endcomment %}
-  <h3>R</h3>
 
-  <p>
-    <a href="http://www.r-project.org">R</a> es un lenguaje de programación 
-    especialmente poderoso para exploración de datos, visualización y  
-    análisis estadístico. Para trabajar con R, usamos
-    <a href="http://www.rstudio.com/">RStudio</a>.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="r-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial en inglés </a>
-      <p>
-
-
-
-        Instala R descargando e instalando
-        <a href="http://cran.r-project.org/bin/windows/base/release.htm">este archivo .exe </a>
-        desde <a href="http://cran.r-project.org/index.html">CRAN</a>.
-        Además, instala el entorno de desarrollo integrado, en inglés Integrated Development Environment (IDE) 
-        <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
-        Ten en cuenta que si tienes cuentas separadas de usuario y administrador,
-	debes correr los instaladores como administrador (haz click derecho en el 
-        archivo .exe y selecciona "Ejecutar como administrador" en lugar de hacer doble click)  
-        De lo contrario pueden ocurrir problemas, por ejemplo, cuando instales paquetes de R.
-
-
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="r-macosx">macOS</h4>
-      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial en inglés</a>
-      <p>
-        Instala R descargando e instalando
-        <a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">este archivo .pkg </a>
-        desde <a href="http://cran.r-project.org/index.html">CRAN</a>.
-        Además, instala el entorno de desarrollo integrado, en inglés Integrated Development Environment (IDE) 
-        <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="r-linux">Linux</h4>
-      <p>
-        Puedes descargar los archivos binarios para tu distribución
-        desde <a href="http://cran.r-project.org/index.html">CRAN</a>. O
-        puedes usar tu administrador de paquetes (por ejemplo: para Debian/Ubuntu
-        corre <code>sudo apt-get install r-base</code> y para Fedora corre
-        <code>sudo dnf install R</code>).  Además, por favor instala el entorno de desarrollo integrado, 
-	en inglés Integrated Development Environment (IDE) 
-        <a href="http://www.rstudio.com/ide/download/desktop">RStudio</a>.
-      </p>
-    </div>
-  </div>
-</div> {% comment %} End of 'R' section. {% endcomment %}
-
-
-{% comment %}
- 
- 
-<div id="sql"> {% comment %} Start of 'SQLite' section. {% endcomment %}
-  <h3>SQLite</h3>
-
-  <p>
-    SQL is a specialized programming language used with databases.  We
-    use a simple database manager called
-    <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
-  </p>
-
-  <p>
-    SQL es un lenguaje de programación usado en bases de datos.
-    Nosotras en nuestras lecciones usamos
-    <a href="http://www.sqlite.org/">SQLite</a>.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="sql-windows">Windows</h4>
-      <p>
-        The <a href="{{site.swc_installer}}">
-          {% if page.carpentry == "swc" %}
-          Software Carpentry
-          {% elsif page.carpentry == "dc" %}
-          Data Carpentry
-          {% elsif page.carpentry == "lc" %}
-          Library Carpentry
-          {% endif %}
-          Windows Installer
-	</a>
-        installs SQLite for Windows.
-        If you used the installer to configure nano, you don't need to run it again.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-macosx">macOS</h4>
-      <p>
-        SQLite comes pre-installed on macOS.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-linux">Linux</h4>
-      <p>
-        SQLite comes pre-installed on Linux.
-      </p>
-    </div>
-  </div>
-
-  <p><strong>If you installed Anaconda, it also has a copy of SQLite
-    <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
-    Instructors will provide a workaround for it if needed.</strong></p>
-</div> {% comment %} End of 'SQLite' section. {% endcomment %}
-
-<div id="openrefine"> {% comment %} Start of 'OpenRefine' section. {% endcomment %}
-  <h3>OpenRefine</h3>
-  <p>
-    For this lesson you will need <em>OpenRefine</em> and a
-    web browser. <em>Note:</em> this is a Java program that runs on your machine (not in the cloud).
-    It runs inside a web browser, but no web connection is needed.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="openrefine-windows">Windows</h4>
-      <p>
-        Check that you have either the Firefox or the Chrome browser installed and set as your default browser.
-        <strong>OpenRefine runs in your default browser.</strong>
-        It will not run correctly in Internet Explorer.
-      </p>
-      <p>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a></p>
-      <p>Create a new directory called OpenRefine.</p>
-      <p>Unzip the downloaded file into the OpenRefine directory by right-clicking and selecting "Extract ...". </p>
-      <p>Go to your newly created OpenRefine directory.</p>
-      <p>Launch OpenRefine by clicking <code>google-refine.exe</code> (this will launch a command prompt window, but you can ignore that - just wait for OpenRefine to open in the browser).</p>
-      <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="openrefine-mac">Mac</h4>
-      <p>Check that you have either the Firefox or the Chrome browser installed and set as your default browser. <strong>OpenRefine runs in your default browser.</strong> It may not run correctly in Safari.</p>
-      <p>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a>.</p>
-      <p>Create a new directory called OpenRefine.</p>
-      <p>Unzip the downloaded file into the OpenRefine directory by double-clicking it.</p>
-      <p>Go to your newly created OpenRefine directory.</p>
-      <p>Launch OpenRefine by dragging the icon into the Applications folder.</p>
-      <p>Use <code>Ctrl-click/Open ... </code> to launch it.</p>
-      <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="openrefine-linux">Linux</h4>
-      <p>Check that you have either the Firefox or the Chrome browser installed and set as your default browser. <strong>OpenRefine runs in your default browser.</strong></p>
-      <p>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a>.</p>
-      <p>Make a directory called OpenRefine.</p>
-      <p>Unzip the downloaded file into the OpenRefine directory.</p>
-      <p>Go to your newly created OpenRefine directory.</p>
-      <p>Launch OpenRefine by entering <code>./refine</code> into the terminal within the OpenRefine directory.</p>
-      <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
-    </div>
-  </div>
-</div> {% comment %} End of 'OpenRefine' section. {% endcomment %}
-
-
-{% endcomment %}
 
 {% comment %}
 <div id="vm">
