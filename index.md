@@ -1,20 +1,21 @@
 ---
 layout: workshop      # NO CAMBIAR ESTO 
 carpentry: "swc"    # qué tipo de Carpentry (ya sea "lc", "dc" o "swc")
+workshoptitle: "Introducción a R y Git"
 venue: "Berkeley Institute for Data Science"        # nombre breve del espacio donde se lleva adelante el taller, sin dirección (por ejemplo, "Universidad de Buenos Aires")
 address: 190 Doe Library, Berkeley, California 94720      # dirección completa del espacio donde se realizará el taller (por ejemplo, "Aula 3, Av. Córdoba 1234, Buenos Aires, Argentina")
 country: "USA"      # código ISO del país, dos letras en minúscula como por ejemplo "fr" (ver https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "es"     # código ISO del idioma, dos letras en minúscula como por ejemplo "fr" (ver https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "COMPLETAR"       # latitud y longitud del espacio en formato decimal (por ejemplo, "41.7901128,-87.6007318" - usar http://www.latlong.net/)
+latlng: "37.872495, -122.259556"       # latitud y longitud del espacio en formato decimal (por ejemplo, "41.7901128,-87.6007318" - usar http://www.latlong.net/)
 humandate: "8 marzo, 2019"   # fechas del taller en formato legible (por ejemplo, "Feb 17-18, 2020")
-humantime: "9:00 am - 1:00 pm PST"   # hora del taller en formato legible (por ejemplo, "9:00 am - 4:30 pm")
-startdate: COMPLETAR      # fecha de inicio del taller en formato YYYY-MM-DD (por ejemplo, 2015-01-01)
-enddate: COMPLETAR        # fecha de finalización del taller en formato YYYY-MM-DD, por ejemplo 2015-01-02
+humantime: "9:00am - 1:00pm PST"   # hora del taller en formato legible (por ejemplo, "9:00 am - 4:30 pm")
+startdate: 2019-03-08      # fecha de inicio del taller en formato YYYY-MM-DD (por ejemplo, 2015-01-01)
+enddate: 2019-03-08         # fecha de finalización del taller en formato YYYY-MM-DD, por ejemplo 2015-01-02
 instructor: ["Juan Pablo Carvallo", "Hector Miguel Sanchez Castellanos"] # lista de nombres de las instructoras separados por comas y entre corchetes, como ["Hedy Lamarr", "Ada Lovelace", "Madame Curie"]
 #helper: ["COMPLETAR"]     # lista de nombres de las **helpers** separados por comas y entre corchetes, como ["Carrie Fisher", "Frances Allen", "Margaret Hamilton"]
 email: ["vnvasquez@berkeley.edu"]    # lista de direcciones de correo electrónico de contacto con la **host** ó **lead instructor**, separadas por comas y entre corchetes, como ["ada.lovelace@ejemplo.org", "carrie.fisher@ejemplo.org", "hedy.lamarr@example.org"]
 collaborative_notes:             # optional: URL de las notas colaborativas del taller, por ejemplo un Etherpad o documento de Google Docs 
-eventbrite: "https://bids.berkeley.edu/events/introducción-r-y-git-introduction-r-and-git"    # optional: clave alfanumérica de registro en Eventbrite, por ejemplo "1234567890AB" (si se está utilizando Eventbrite)
+eventbrite: 57139564977    # optional: clave alfanumérica de registro en Eventbrite, por ejemplo "1234567890AB" (si se está utilizando Eventbrite)
 ---
 
 {% comment %} Ver en los comentarios que siguen las instrucciones sobre cómo editar secciones específicas de esta plantilla de taller {% endcomment %}
@@ -34,6 +35,8 @@ eventbrite: "https://bids.berkeley.edu/events/introducción-r-y-git-introduction
   
 {% endcomment %}
 {% if page.eventbrite %}
+<h2> Registración
+<h4>Es requisito registrarse para participar en este workshop. Por favor reserva su puesto aquí: 
 <iframe
   src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
   frameborder="0"
