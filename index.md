@@ -14,7 +14,7 @@ instructor: ["Juan Pablo Carvallo", "Hector Miguel Sanchez Castellanos"] # lista
 helper: ["COMPLETAR"]     # lista de nombres de las **helpers** separados por comas y entre corchetes, como ["Carrie Fisher", "Frances Allen", "Margaret Hamilton"]
 email: ["vnvasquez@berkeley.edu"]    # lista de direcciones de correo electrónico de contacto con la **host** ó **lead instructor**, separadas por comas y entre corchetes, como ["ada.lovelace@ejemplo.org", "carrie.fisher@ejemplo.org", "hedy.lamarr@example.org"]
 collaborative_notes:             # optional: URL de las notas colaborativas del taller, por ejemplo un Etherpad o documento de Google Docs 
-eventbrite: Es requisito registrarse para participar en este workshop. Por favor reserva su puesto aquí: https://bids.berkeley.edu/events/introducci%C3%B3n-r-y-git-introduction-r-and-git    # optional: clave alfanumérica de registro en Eventbrite, por ejemplo "1234567890AB" (si se está utilizando Eventbrite)
+eventbrite: "https://bids.berkeley.edu/events/introducción-r-y-git-introduction-r-and-git"    # optional: clave alfanumérica de registro en Eventbrite, por ejemplo "1234567890AB" (si se está utilizando Eventbrite)
 ---
 
 {% comment %} Ver en los comentarios que siguen las instrucciones sobre cómo editar secciones específicas de esta plantilla de taller {% endcomment %}
@@ -30,8 +30,8 @@ eventbrite: Es requisito registrarse para participar en este workshop. Por favor
 
 {% comment %}
   EVENTBRITE
-
-  Este bloque incluye el widget para registro en Eventbrite, en caso de que 'eventbrite' haya sido especificado en el encabezado. Puedes borrarlo si no estás usando Eventbrite, o dejarlo, ya que no se mostrará si el campo 'eventbrite' en el encabezado no fue especificado. 
+  Es requisito registrarse para participar en este workshop. Por favor reserva su puesto en Eventbrite. 
+  
 {% endcomment %}
 {% if page.eventbrite %}
 <iframe
@@ -396,108 +396,7 @@ También es requerido que respeten el
 
 
 
-<div id="editor"> {% comment %} Start of 'editor' section. {% endcomment %}
-  <h3>Text Editor</h3>
-
-  <p>
-	Si accidentalmente encuentras dificultades, prueba typing la tecla  
-escape, seguido por <code>:q!</code>(colon, olon, lower-case 'q',
-    exclamation mark),
-	...
-	Cuando estás escribiendo código, es bueno tener un editor de texto que sea
-    optimizado para escribir código, con características como automático
-    código de color de las palabras clave. El editor de texto predeterminado en macOS y
-    Linux usualmente se establece en Vim, que no es famoso por ser
-    intuitivo. Si accidentalmente te encuentras atascado en él, intenta
-    escribiendo la clave de escape, seguido de <code>: q! </code> (dos puntos, minúscula 'q',
-    signo de exclamación), luego presionando Volver para regresar al intérprete de comandos.
-</p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="editor-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
-      <p>
-	nano es un editor básico y el predeterminado que usan los instructores en el taller.
-	Para instalarlo,
-	Descargas el<a href="{{site.swc_installer}}">
-          {% if page.carpentry == "swc" %}
-          Software Carpentry
-          {% elsif page.carpentry == "dc" %}
-          Data Carpentry
-          {% elsif page.carpentry == "lc" %}
-          Libreria Carpentry
-          {% endif %}
-          Instalador de Windowns
-	</a>
-	 y doble click en el archivo para correrlo.
-        <strong>Esta instalación requiere una conexión a Internet.</strong>
-      </p>
-      <p>
-        Otros editores que puedes usar son
-        <a href="http://notepad-plus-plus.org/">Notepad++</a> or
-        <a href="http://www.sublimetext.com/">Sublime Text</a>.
-        <strong>
-	Ten en cuenta que debes
-        agregar tu directorio de instalación a la ruta del sistema. </strong>
-        Por favor, Pídele a tu instructor que te ayude a hacer esto.
-	</p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="editor-macosx">macOS</h4>
-      <p>
-	nano es un editor básico y el predeterminado que usan los instructores en el taller.
-        Mira la instalacion de Git <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
-       	Para un ejemplo sobre como abrir nano.
-        Debe estar preinstalado.
-	</p>
-      <p>
-	Otros editores que puedes usar son
-        <a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
-        <a href="http://www.sublimetext.com/">Sublime Text</a>.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="editor-linux">Linux</h4>
-      <p>
-	nano es un editor básico y el predeterminado que usan los instructores en el taller. 
-	Para instalarlo,
-      </p>
-      <p>
-	Otros editores que puedes usar son
-        <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>,
-        <a href="http://kate-editor.org/">Kate</a> or
-        <a href="http://www.sublimetext.com/">Sublime Text</a>.
-      </p>
-    </div>
-  </div>
-</div> {% comment %} End of 'editor' section. {% endcomment %}
 
 
 
 
-{% comment %}
-<div id="vm">
-  <h3>Máquina Virtual</h3>
-
-  <p>
-      Algunos instructores prefieren que los alumnos utilicen una máquina virtual
-      en lugar de instalar software en sus propias computadoras. Si tus
-      instructores han elegido hacer esto, por favor: 
-  </p>
-  <ol>
-    <li>
-      Instalar <a href="https://www.virtualbox.org/">VirtualBox</a>.
-    </li>
-    <li>
-      Descarga nuestra <a href="{{site.swc_vm}}">imagen de máquina virtual</a>.
-      <strong>Advertencia:</strong> este archivo pesa 1.7 GByte, entonces por favor
-      descárgalo <em>antes</em> de venir al taller.
-    </li>
-    <li>
-      Carga la máquina virtual en VirtualBox seleccionando "Importar dispositivo" 
-      y cargando el archivo <code>.ova</code> .
-    </li>
-  </ol>
-</div>
-{% endcomment %}
