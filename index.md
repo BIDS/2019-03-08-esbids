@@ -29,27 +29,10 @@ eventbrite: 57139564977    # optional: clave alfanumérica de registro en Eventb
   Por último ejecuta 'make workshop-check' *antes* de comitear para asegurarte que los cambios estan bien.
 {% endcomment %}
 
+
 {% comment %}
-  EVENTBRITE
- Es requisito registrarse para participar en este workshop. Por favor reserva su puesto aquí:   
-  
-{% endcomment %}
-{% if page.eventbrite %}
-<h2> Registración
-<h4>Es requisito registrarse para participar en este workshop. Por favor reserva su puesto aquí: 
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="248px"
-  scrolling="auto">
-</iframe>
-{% endif %}
-
-
-
 <h4>Esta es la plantilla de taller. Elimina éstas líneas y utilíza la plantilla para personalizar tu propio sitio web. Si estás desarrollando un taller auto-gestionado o aún no hiciste una solicitud de pedido de taller, por favor completa este <a href="{{site.amy_site}}/submit">formulario</a> para notificarnos y que nuestra administradora pueda contactarte si necesitamos información adicional.</h4>
-
+{% endcomment %}
 
 
 <h2 id="general">Información General</h2>
@@ -174,9 +157,22 @@ También es requerido que respeten el
 <hr/>
 
 {% comment %}
+  EVENTBRITE 
+{% endcomment %}
+{% if page.eventbrite %}
+<h2> Registración
+<h5>Es requisito registrarse para participar en este workshop. Por favor reserva su puesto aquí: 
+<iframe
+  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
+  frameborder="0"
+  width="100%"
+  height="248px"
+  scrolling="auto">
+</iframe>
+{% endif %}
+
+{% comment %}
   SCHEDULE
-
-
 
  Muestra el cronograma del taller. Edita los ítems y horarios en la tabla para ajustarlos a tu planificación. Puede que quieras modificar 'Día 1' y 'Día 2' para mostrar fechas concretas o días de la semana.
 
@@ -186,9 +182,7 @@ También es requerido que respeten el
 {% comment %} NO EDITAR LOS ENLACES A LAS ENCUESTAS {% endcomment %}
 <p><em>Encuestas</em></p>
 {% if page.carpentry == "swc" %}
-<p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
-<p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Encuesta pre-taller</a></p>
-<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
+<p>Por favor, asegúrese de completar estas encuestas después del taller:<a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Encuesta post-taller</a></p>
 
 {% elsif page.carpentry == "dc" %}
   <p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
