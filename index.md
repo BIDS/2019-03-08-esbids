@@ -200,7 +200,10 @@ También es requerido que respeten el
 
 {% comment %} NO EDITAR LOS ENLACES A LAS ENCUESTAS {% endcomment %}
 {% if page.carpentry == "swc" %}
+
+{% comment %}
 <p>Por favor, asegúrese de completar esta encuesta después del taller:<a href="{{ site.swc_post_survey }}{{ site.github.project_title }}"> encuesta post-taller. </a></p>
+{% endcomment %}
 
 {% elsif page.carpentry == "dc" %}
   <p>Por favor, asegúrese de completar estas encuestas antes y después del taller.</p>
