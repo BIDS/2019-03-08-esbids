@@ -12,7 +12,7 @@ humantime: "9:00am - 1:00pm PST"   # hora del taller en formato legible (por eje
 startdate: 2019-03-08  # fecha de inicio del taller en formato YYYY-MM-DD (por ejemplo, 2015-01-01)
 enddate: 2019-03-08   # fecha de finalización del taller en formato YYYY-MM-DD, por ejemplo 2015-01-02
 instructor: ["Juan Pablo Carvallo", "Hector Manuel Sanchez Castellanos"] # lista de nombres de las instructoras separados por comas y entre corchetes, como ["Hedy Lamarr", "Ada Lovelace", "Madame Curie"]
-#helper: ["COMPLETAR"]     # lista de nombres de las **helpers** separados por comas y entre corchetes, como ["Carrie Fisher", "Frances Allen", "Margaret Hamilton"]
+helper: ["Valeri Vasquez"]     # lista de nombres de las **helpers** separados por comas y entre corchetes, como ["Carrie Fisher", "Frances Allen", "Margaret Hamilton"]
 email: ["vnvasquez@berkeley.edu"]    # lista de direcciones de correo electrónico de contacto con la **host** ó **lead instructor**, separadas por comas y entre corchetes, como ["ada.lovelace@ejemplo.org", "carrie.fisher@ejemplo.org", "hedy.lamarr@example.org"]
 collaborative_notes: http://pad.software-carpentry.org/2019-03-08-esbids   # optional: URL de las notas colaborativas del taller, por ejemplo un Etherpad o documento de Google Docs 
 eventbrite: 57139564977    # optional: clave alfanumérica de registro en Eventbrite, por ejemplo "1234567890AB" (si se está utilizando Eventbrite)
