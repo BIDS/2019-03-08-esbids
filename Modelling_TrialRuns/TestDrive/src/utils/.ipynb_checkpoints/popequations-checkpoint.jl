@@ -147,7 +147,7 @@ function mate(P, M, Φ, Η, node::Node, gene_index::Int64, ctemp)
     
     # Loop through genotypes 
     nowmate = M.*Η
-    nowmate = LinearAlgebra.normalize(nowmate)  # normalizing is dividing by the two-norm and therefore can be reformulated (and is defined as convex)
+    nowmate = LinearAlgebra.normalize(nowmate, 1)  # normalizing is dividing by the two-norm and therefore can be reformulated (and is defined as convex)
 
     return nowmate*(Φ[gene_index] * prev_q * prev.n * P[end,:]')
     
