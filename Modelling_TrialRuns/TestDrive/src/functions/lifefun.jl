@@ -1,28 +1,21 @@
 """
-Functions for Stage and Density 
-
-Question: correct to include lin_dens and log_dens here?
-Question: correct to include functions building MCR-specific here, or should that remain in data section? 
+Density functions 
 """
 
-
-## Density
-
-# Linear 
-function density_model(data::Density{Linear}, stage::Stage)
-    
-    return data.param * stage  
-    
+# Linear density 
+function compute_density(data::Density{LinearDens}, stage) 
+    return data.param * sum(stage)        # This equation may not be correct; check against Hancock.
 end
 
-lin_dens = Density(Linear, 5.0)
 
 
-# Logistic 
-function density_model(data::Density{Logistic}, Lifeststage::Stage)
-    
-    return (1 + (sum(stage)/data.param))
-    
+# Logistic density 
+function compute_density(data::Density{LogisticDens}, stage)
+    return (1 + (sum(stage)/data.param))  # This equation is checked against MGDrivE -> NB for decision model that nonlinearity not an issue bc sum is divided by a single parameter 
 end
 
-log_dens = Density(Logistic, 9.0)
+
+# No density 
+function compute_density(data::Density{NoDens}, stage)
+    return data.param                               
+end

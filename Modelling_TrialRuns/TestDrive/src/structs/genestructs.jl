@@ -1,8 +1,8 @@
 """
-Includes Drive and Genetics 
+Includes Drive and Genetics.
 
-NB on cube: depth = distribution of offspring, horizontal slice = XX offspring for all parental combos
-Question: correct to put "model-specific structs" at the end? Does order matter?
+TODO: 
+(1) Test on constructs beyond MCR (eg, Mendelian and SplitDrive). 
 """
 
 ## Drive: one genotype at a time (subsets Genetics)
@@ -40,8 +40,8 @@ struct Genetics
             Η = Vector{Float64}(undef, gN)
         
             for (index, g) in enumerate(all_genotypes)
-                cube[:,:,index] = g.cube_slice
-                S[index] = g.s
+                cube[:,:,index] = g.cube_slice # depth slice = distribution of offspring, 
+                S[index] = g.s                 # horiz slice = XX offspring for all parental combos
                 Τ[:,:,index] = g.τ
                 Φ[index] = g.ϕ
                 Β[index] = g.β
@@ -57,10 +57,13 @@ end
 ## Methods for this struct include: 
 length(G::Genetics) = length(G.all_genotypes)  # Be sure to: `import Base.length` in Main.jl
 
-## Model-specific structs (can be altered):
-struct HH <: Genotype end 
-struct Hh <: Genotype end 
-struct HR <: Genotype end
-struct hh <: Genotype end 
-struct hR <: Genotype end 
-struct RR <: Genotype end
+
+## See individual genedata_* files for construct-specific structs 
+
+
+
+
+
+
+
+

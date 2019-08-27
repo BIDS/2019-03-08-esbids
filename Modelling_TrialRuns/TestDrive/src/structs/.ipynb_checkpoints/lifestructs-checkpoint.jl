@@ -1,18 +1,39 @@
 """
-Includes Stage and Density 
+Includes Stage and Density. 
+
+TODO: 
+(1) How to further improve density implementation/develop better functional forms?
+(2) How to include climactic concerns (temp, precip) in both stage AND density? 
+
+NB from David re: use of structs vs. mutable structs" 
+Could interpret as initial values -> in which case use just struct. Or interpret it as a structure that holds the current values, changing as you simulate -> use mutable struct. 
 """
+
+## Density 
+
+abstract type DensityDependence end
+
+struct Density{D <: DensityDependence}
+    model::Type{D}                  # Currently available: logistic, linear, or none
+    param::Float64                  # 355.0 in logistic, ?? in linear, 1.0 in none
+end
+
+struct LinearDens <: DensityDependence end
+struct LogisticDens <: DensityDependence end
+struct NoDens <: DensityDependence end 
 
 
 ## Stage
+
 abstract type LifeStage end 
 
 struct Stage{L <: LifeStage}
-    stage::Type{L}
-    t::Union{Nothing, Float64}         # Total stage duration
-    q::Union{Nothing, Float64}         # 1/duration = total time in each substage 
+    stage::Type{L}                     # Stage type
+    # duration::Union{Nothing, Int64}  # Total stage duration: necessary to have this AND q? 
+    q::Union{Nothing, Float64}         # 1/duration = total time in each substage -> 1/total stage duration
     n::Union{Nothing, Int64}           # Number of substages 
     μ::Float64                         # Mortality 
-    d::Any    # Enables flexible density dependence specification 
+    density::Density                   # Flexible density dependence model specification 
     N0::Int64                          # Initial count (Question: "any" or "int64"?) 
 end
 
@@ -25,39 +46,14 @@ struct Female <: LifeStage end
 
 
 
-
-## Density 
-abstract type DensityModel end
-
-struct Density{D <: DensityModel}
-    model::Type{D}
-    param::Float64  # K in case of logistic, γ in case of linear
-end
-
-struct Linear <: DensityModel end
-struct Logistic <: DensityModel end
-
-
-
-
-
 ## Get/access functions
-get_allstages(node::Node) = @view node.all_stages[:]
 
-function get_stage(stage_array::Vector{Stage}, life_stage::Type)
-    
-    # can be improved (speed): 
-    return [s for s in stage_array if isa(s,Stage{life_stage})][1] # isa = way of getting content of array by time 
+# get_duration(stage::Stage) = stage.q # changing thinking about duration to be 1/duration -> total time in each SUB stage rather than stage.
 
-end
-            
-function get_stage(node::Node, life_stage::Type)
-    
-    # this can also be improved 
-    stage_array = get_allstages(node)
-                
-    return get_stage(stage_array, life_stage)
-                
-end  
+get_mortality(stage::Stage) = stage.μ # Specific stage, no node 
 
-get_density(stage::Stage) = stage.d
+get_substages(stage::Stage) = stage.n # Specific stage, no node
+
+get_density(stage::Stage) = stage.density # Specific stage, no node
+
+
