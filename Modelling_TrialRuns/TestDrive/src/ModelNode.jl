@@ -71,9 +71,11 @@ function population_model_node(du, u, (node, controls), t)
         
         # Oviposit
         eggsnew = oviposit(F, cube, Τ, S, Β, gene_index) # investigate ctemp inclusion 
+        #@show(gene_index, eggsnew, Τ[:, :, gene_index])
         
         # Egg
         create_egg!(dE, E, node, eggsnew, gene_index, ctemp) # ctemp = celsius temperature 
+        #@show(gene_index, eggsnew, E[:, gene_index])
 
         # Larvae
         create_larvae!(dL, L, E, node, gene_index, ctemp) 
@@ -83,12 +85,15 @@ function population_model_node(du, u, (node, controls), t)
     
         # Males
         create_male!(dM, M, P, Φ, node, controls, gene_index, ctemp)
+        #@show(gene_index, M[gene_index], t)
     
         # Mate
         matematrix = mate(P, M, Φ, Η, node, gene_index, ctemp) # must include ctemp for pupae
+        #@show(matematrix)
     
         # Females 
         create_female!(dF, F, node, matematrix, gene_index, ctemp) 
+        #@show(gene_index, F)
         
     end # Genotype loop 
     

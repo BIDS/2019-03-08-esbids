@@ -35,7 +35,7 @@ mcr6 = [0  0  0 0.0 0.00  0; 0  0  0 0.0 0.00  0; 0  0 0.25  0 0.25 0.5;
 
 ## Build drives: Drive(genotype, cube_slice, s, τ, ϕ, β, η)
 drives_mcr = [
-    Drive(HH, mcr1, 1.0, ones(6,6), 0.5, 16.0, 1.0),
+    Drive(HH, mcr1, 1.0, ones(6,6), 0.5, 16.0, 1.0),   #ones(6,6)
     Drive(Hh, mcr2, 1.0, ones(6,6), 0.5, 16.0, 1.0), 
     Drive(HR, mcr3, 1.0, ones(6,6), 0.5, 16.0, 1.0),
     Drive(hh, mcr4, 1.0, ones(6,6), 0.5, 16.0, 1.0),

@@ -23,8 +23,8 @@ sit3 = [0.0 0.00 0.0; 0.0 0.25 0.5; 0.0 0.50 1.0]
 
 ## Build drives: Drive(genotype, cube_slice, s, τ, ϕ, β, η)
 drives_sit = [
-    Drive(AA, sit1, 1.0, zeros(3,3), 0.5, 16.0, 1.0),      # tau = 0.0 assumes 100% effectiveness for homozygous 
-    Drive(Aa, sit2, 1.0, fill(0.5, 3,3), 0.5, 16.0, 1.0),  # tau = 0.5 may not be biologically accurate; just testing
+    Drive(AA, sit1, 1.0, zeros(3,3), 0.5, 16.0, 1.0),      # tau = 0.0 assumes 100% effectiveness -> anyone with sterilized father won't be born 
+    Drive(Aa, sit2, 1.0, ones(3,3), 0.5, 16.0, 1.0),       # to see if there are heterozygotes (there shouldn't be)
     Drive(aa, sit3, 1.0, ones(3,3), 0.5, 16.0, 1.0),  
 ]
 

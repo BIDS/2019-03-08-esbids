@@ -10,9 +10,11 @@ TODO:
 
 
 ## OVIPOSITION: 
+
 function oviposit(F, cube, Τ, S, Β, gene_index::Int64)
     return  sum(cube[:,:,gene_index].*Τ[:,:,gene_index].*S[gene_index]*Β[gene_index].*F)
 end
+
 
 
 ## EGG: 
@@ -27,7 +29,7 @@ function create_egg!(dE, E, node::Node, eggsnew, gene_index::Int64, ctemp)
     
     prev = eggsnew
     
-    # Loop through genotypes 
+    # Loop through genotypes
     dE[1,gene_index] = prev - E[1,gene_index]*(curr_μ * dens + curr_q * curr.n) 
         
         for i in 2:size(dE)[1]  

@@ -23,10 +23,10 @@ struct Genetics
     
     all_genotypes::Array{Drive{<:Genotype}}  # all genotypes in this population 
     cube::Array{Float64, 3}                  # offspring likelihoods, per genotype
-    S::Vector{Float64}                       # fractional reduction in fertility, per genotype 
+    S::Vector{Float64}                       # fractional reduction in fertility, per genotype - masks the number of eggs (scales)
     Τ::Array{Float64,3}                      # offspring viability, per genotype  
     Φ::Vector{Float64}                       # male to female emergence ratio (gender), per genotype 
-    Β::Vector{Float64}                       # female fecundity, per genotype  
+    Β::Vector{Float64}                       # female fecundity, per genotype  - normal average egg number for all females (23 for aedes)
     Η::Vector{Float64}                       # male mating fitness, per genotype 
         
         function Genetics(all_genotypes::Array{Drive{<:Genotype}}) 
